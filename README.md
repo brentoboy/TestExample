@@ -50,6 +50,7 @@ Modify your classes code to fix the error (or fix the logic of your test if its 
 
 if your logic class contains your validation logic (like my example) then the UI still has to wrap that logic.  But the function in the UI area has no need to know what sorts of values are valid or invalid for a particular field,  Your validatin functions might look like this
 
+```csharp
 private void SomeControl_Validating(object sender, CancelEventArgs e)
 {
 	try
@@ -63,4 +64,4 @@ private void SomeControl_Validating(object sender, CancelEventArgs e)
 		e.Cancel = true;
 	}
 }
-
+```
